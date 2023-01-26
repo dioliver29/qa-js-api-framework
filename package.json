@@ -1,0 +1,21 @@
+{
+  "name": "qa-js-api-framework",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "@babel/plugin-transform-modules-commonjs": "^7.19.6",
+    "@babel/preset-env": "^7.20.2",
+    "babel": "^6.23.0",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "supertest": "^6.3.3"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.0",
+    "npm": "^9.3.1"
+  }
+}
