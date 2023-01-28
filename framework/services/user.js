@@ -1,5 +1,5 @@
 import supertest from "supertest";
-import config from "../../framework/config/config";
+import config from "../config/config";
 const {url} = config;
 const {userId} = config;
 
@@ -8,9 +8,10 @@ let token = '';
 const user = {
     login: (payload) => {
         return supertest(url)
-            .post('/v1/login')
+            .post('/Account/v1/login')
             .set('Accept', 'Application/json')
             .send(payload)
+            
     },
     async getAuthToken() {
         const payload = config.credentials
@@ -28,7 +29,7 @@ const user = {
 
     userInfo: (userId, token) => {
         return supertest(url)
-            .get(`/v1/User/${userId}`)
+            .get(`/Account/v1/User/${userId}`)
             .set('Authorization', `Bearer ${token}`)
     },
 
@@ -41,12 +42,10 @@ const user = {
 
     deleteUser: (userId, token) => {
         return supertest(url)
-            .delete(`/v1/User/${userId}`)
+            .delete(`/Account/v1/User/${userId}`)
             .set('Authorization', `Bearer ${token}`)
     }
 
 }
-
-
 
 export default user;

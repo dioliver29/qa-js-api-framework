@@ -1,6 +1,6 @@
 import supertest from "supertest";
 import {jest} from "@jest/globals";
-import services from "../framework/services/services";
+import services from "../framework/services/user";
 import config from "../framework/config/config";
 
 test ('login with valid credentials', async () => {
