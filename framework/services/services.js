@@ -2,8 +2,9 @@ import supertest from "supertest";
 import config from "../../framework/config/config";
 const {url} = config;
 const {userId} = config;
+import newUserCreds from "../helpers/newUserCreds.json";
 
-let token = '';
+
 
 const user = {
     login: (payload) => {
@@ -44,7 +45,6 @@ const user = {
             .delete(`/v1/User/${userId}`)
             .set('Authorization', `Bearer ${token}`)
     }
-
 }
 
 
